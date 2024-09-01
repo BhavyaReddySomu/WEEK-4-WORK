@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for...in Loop Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .output {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function displayObjectProperties() {
+          const person = {
+                name: 'John Doe',
+                age: 30,
+                occupation: 'Software Developer',
+                location: 'New York'
+            };
+
+       
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '<h3>Object Properties:</h3>';
+
+           
+            for (let key in person) {
+                if (person.hasOwnProperty(key)) {
+                
+                    const para = document.createElement('p');
+                    para.textContent = `${key}: ${person[key]}`;
+              
+                    outputDiv.appendChild(para);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>for...in Loop Example</h2>
+        <button onclick="displayObjectProperties()">Show Object Properties</button>
+        <div id="output" class="output">
+        
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .condition-check {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .condition-check input, .condition-check button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .condition-check button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .condition-check button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+<body>
+    <div class="condition-check">
+        <h2>Check Access Conditions</h2>
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" placeholder="Enter age" />
+
+        <label for="permission">
+            <input type="checkbox" id="permission" />
+            Do you have permission?
+        </label>
+        
+        <button onclick="checkConditions()">Check Access</button>
+        
+        <div id="result" class="result">
+       
+        </div>
+    </div>
+</body>
+<script>
+    function checkConditions() {
+ 
+        var age = parseInt(document.getElementById('age').value);
+        var hasPermission = document.getElementById('permission').checked;
+
+            if (age >= 18 && hasPermission) {
+            document.getElementById('result').textContent = 'Access granted.';
+        } else if (age < 18 && !hasPermission) {
+            document.getElementById('result').textContent = 'Access denied: Underage and no permission.';
+        } else if (age >= 18 || hasPermission) {
+            document.getElementById('result').textContent = 'Access granted with conditions.';
+        } else {
+            document.getElementById('result').textContent = 'Access denied.';
+        }
+    }
+</script>
+</html>

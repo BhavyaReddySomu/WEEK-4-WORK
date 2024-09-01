@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Constructor Example</title>
+</head>
+<body>
+    <h1>Person Constructor Example</h1>
+    <script>
+       
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        Person.prototype.introduce = function() {
+            console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old.`);
+        };
+
+  
+        const person1 = new Person('Bhavya', 19);
+        const person2 = new Person('Honet', 18);
+
+        person1.introduce();
+        person2.introduce();
+    </script>
+</body>
+</html>

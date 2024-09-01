@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Key Press Example</title>
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function() {
+           var inputField = document.querySelector('#my-input');
+           
+            if (inputField) {
+          
+                inputField.addEventListener('keydown', function(event) {
+               
+                    console.log('Key pressed:', event.key);
+                });
+            } else {
+                console.log('Input field not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="my-input" placeholder="Type something...">
+</body>
+</html>

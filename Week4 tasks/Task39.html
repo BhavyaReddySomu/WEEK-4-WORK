@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color Example</title>
+    <style>
+        .highlight {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.querySelectorAll('.highlight');
+            elements.forEach(function(element) {
+                element.style.backgroundColor = 'lightblue';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="highlight">Item 1</div>
+    <div class="highlight">Item 2</div>
+    <div>Item 3 (no highlight class)</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log First Child Example</title>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+        var parentElement = document.querySelector('#parent-element');
+            
+           
+            if (parentElement) {
+               console.log('First child node:', parentElement.firstChild);
+                console.log('First child node type:', parentElement.firstChild.nodeType); // 1 for element nodes, 3 for text nodes
+                console.log('First child node content:', parentElement.firstChild.textContent || 'No text content');
+            } else {
+                console.log('Parent element not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="parent-element">
+        Text before any other elements.
+        <p>This is a paragraph inside the div.</p>
+    </div>
+    <div>
+        <p>Another paragraph in a different div.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Class Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+             var toggleButton = document.querySelector('#toggle-button');
+            var targetElement = document.querySelector('#target-element');
+            
+            if (toggleButton && targetElement) {
+                toggleButton.addEventListener('click', function() {
+                    targetElement.classList.toggle('highlight');
+                });
+            } else {
+                console.log('Button or target element not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="target-element">
+        This is the target element.
+    </div>
+    <button id="toggle-button">Toggle Highlight</button>
+</body>
+</html>

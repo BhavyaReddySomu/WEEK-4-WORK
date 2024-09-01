@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Factorial Of Number</h1>
+    <form onsubmit="event.preventDefault(); calculateFactorial();">
+    <label for="number">Number</label>
+    <input type="Number" id="number" min="0"  required>
+    <br>
+    <input type="Submit" value="calculateFactorial">
+    </form>
+    <h2 id="result"></h2>
+</body>
+<script>
+    
+    function factorial(n) {
+           
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+          
+            return n * factorial(n - 1);
+        }
+
+        
+        function calculateFactorial() {
+        
+            const num = parseInt(document.getElementById('number').value, 10);
+            const result = factorial(num);
+            document.getElementById('result').innerText = `Factorial of ${num} is ${result}.`;
+        }
+</script>
+</html>

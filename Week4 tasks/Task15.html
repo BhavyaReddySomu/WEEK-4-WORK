@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Until Stop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .result {
+            margin-top: 10px;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Prompt Until Stop</h2>
+        <button onclick="promptUntilStop()">Start Prompting</button>
+        <div id="result" class="result">
+       
+        </div>
+    </div>
+</body>
+<script>
+    function promptUntilStop() {
+        let userInput;
+        do {
+            
+            userInput = prompt("Enter something (type 'stop' to end):");
+            
+            document.getElementById('result').textContent = 'You entered: ' + userInput;
+        } while (userInput !== null && userInput.toLowerCase() !== 'stop');
+        
+        
+        document.getElementById('result').textContent = 'You entered "stop" or canceled the prompt.';
+    }
+</script>
+</html>

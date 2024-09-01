@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Content</title>
+    <script>
+       
+        function changeTextContent() {
+            const element = document.getElementById('myElement');
+
+            if (element) {
+                element.textContent = 'The text has been changed!';
+            } else {
+                console.error('Element with ID "myElement" not found.');
+            }
+        }
+          document.addEventListener('DOMContentLoaded', changeTextContent);
+    </script>
+</head>
+<body>
+    <p id="myElement">Original text</p>
+</body>
+</html>

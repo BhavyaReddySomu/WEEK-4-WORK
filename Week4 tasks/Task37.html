@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Child Nodes</title>
+    </head>
+<body>
+ 
+    <div>Child Div 1</div>
+   <p>Child Paragraph 1</p>
+    <span>Child Span 1</span>
+</body>
+<script>
+      
+    function logChildNodeCount() {
+       const bodyElement = document.body;
+       const numberOfChildNodes = bodyElement.childNodes.length;
+       console.log('Number of child nodes in the body element:', numberOfChildNodes);
+    }
+
+    document.addEventListener('DOMContentLoaded', logChildNodeCount);
+</script>
+</html>

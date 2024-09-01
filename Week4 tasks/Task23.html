@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript Scope</h1>
+    <button onclick="demonstrateScope()">Show Variables Inside Function</button>
+    <button onclick="showResults()">Show Variables Outside Function</button>
+    <p id="globalResult"></p>
+    <p id="localResult"></p>
+
+</body>
+<script>
+      var globalVar = "I am a global variable";
+
+function demonstrateScope() {
+
+    var localVar = "I am a local variable";
+
+    
+    document.getElementById('globalResult').innerText = "Inside function - Global Variable: " + globalVar;
+    document.getElementById('localResult').innerText = "Inside function - Local Variable: " + localVar;
+}
+
+function showResults() {
+  
+    document.getElementById('globalResult').innerText = "Outside function - Global Variable: " + globalVar;
+    try {
+        document.getElementById('localResult').innerText = "Outside function - Local Variable: " + localVar;
+    } catch (e) {
+        document.getElementById('localResult').innerText = "Outside function - Local Variable: Error (" + e.message + ")";
+    }
+}
+</script>
+</html>

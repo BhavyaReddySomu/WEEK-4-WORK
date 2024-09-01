@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Mapping Example</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Mapping Example</h1>
+    <div id="output"></div>
+    <button id="squareButton">Square Numbers</button>
+</body>
+<script>
+        
+    const numbers = [1, 2, 3, 4, 5];
+
+    function displayResults() {
+    
+        const squaredNumbers = numbers.map(num => num * num);
+        document.getElementById('output').innerHTML = `
+            <strong>Original Numbers:</strong> ${numbers.join(', ')} <br>
+            <strong>Squared Numbers:</strong> ${squaredNumbers.join(', ')}
+        `;
+    }
+    document.getElementById('squareButton').addEventListener('click', displayResults);
+</script>
+</html>

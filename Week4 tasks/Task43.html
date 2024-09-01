@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log All Child Nodes Example</title>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+           var parentElement = document.querySelector('#parent-element');
+              if (parentElement) {
+                var childNodes = parentElement.childNodes;
+                
+                childNodes.forEach(function(childNode, index) {
+                    console.log(`Child node ${index + 1}:`, childNode);
+                    console.log(`Type: ${childNode.nodeType}`);
+                    console.log(`Content: ${childNode.textContent || 'No text content'}`);
+                });
+            } else {
+                console.log('Parent element not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="parent-element">
+      <p>This is a paragraph inside the div.</p>
+  </div>
+    <div>
+        <p>Another paragraph in a different div.</p>
+    </div>
+</body>
+</html>

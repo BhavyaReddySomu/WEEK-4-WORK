@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter Example</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter Even Numbers</h1>
+    <div id="output"></div>
+    <button id="filterButton">Show Even Numbers</button>
+</body>
+<script>
+    
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    
+    function filterEvenNumbers() {
+    
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        document.getElementById('output').innerHTML = `
+            <strong>Original Numbers:</strong> ${numbers.join(', ')} <br>
+            <strong>Even Numbers:</strong> ${evenNumbers.join(', ')}
+        `;
+    }
+
+    document.getElementById('filterButton').addEventListener('click', filterEvenNumbers);
+</script>
+</html>

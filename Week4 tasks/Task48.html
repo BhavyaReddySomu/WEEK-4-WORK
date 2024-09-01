@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone and Append Element</title>
+    <style>
+        .clone {
+            border: 2px dashed red;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+          
+            var elementToClone = document.querySelector('#original-element');
+            if (elementToClone) {
+             
+                var clonedElement = elementToClone.cloneNode(true);
+                clonedElement.classList.add('clone'); 
+                document.body.appendChild(clonedElement);
+                console.log('Element cloned and appended successfully');
+            } else {
+                console.log('Element to clone not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="original-element">
+        <p>This is the original element.</p>
+    </div>
+    <div>
+        <p>This element will remain in the DOM.</p>
+    </div>
+</body>
+</html>

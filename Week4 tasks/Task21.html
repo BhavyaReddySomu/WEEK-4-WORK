@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upper Case String</h1>
+    <form onsubmit="event.preventDefault(); convertToUpperCase();">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" required>
+        <br><br>
+        <input type="submit" value="Convert to Uppercase">
+    </form>
+    <h2 id="result"></h2>
+    
+</body>
+<script>
+    function toUpperCase(str) {
+            return str.toUpperCase();
+        }
+
+       
+        function convertToUpperCase() {
+         
+            const inputString = document.getElementById('inputString').value;
+            const upperCaseString = toUpperCase(inputString);
+            document.getElementById('result').innerText = `Uppercase: ${upperCaseString}`;
+        }
+</script>
+</html>

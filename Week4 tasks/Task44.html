@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Inner HTML Example</title>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+         var myDiv = document.querySelector('#my-div');
+             if (myDiv) {
+                  myDiv.innerHTML = '<p>This is the new content!</p>';
+            } else {
+                console.log('Div element not found');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        <p>This is the original content.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reduce Example</title>
+    <style>
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Sum of Array</h1>
+    <div id="output"></div>
+    <button id="calculateButton">Calculate Sum</button>
+</body>
+<script>
+    
+    const numbers = [1, 2, 3, 4, 5];
+
+    
+    function calculateSum() {
+        
+        const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        document.getElementById('output').innerHTML = `
+            <strong>Numbers:</strong> ${numbers.join(', ')} <br>
+            <strong>Sum:</strong> ${sum}
+        `;
+    }
+    document.getElementById('calculateButton').addEventListener('click', calculateSum);
+</script>
+</html>

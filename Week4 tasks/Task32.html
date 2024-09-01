@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation with shift and unshift</title>
+    <style>
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Manipulation Example</h1>
+    <div id="output"></div>
+    <button id="addButton">Add Element</button>
+    <button id="removeButton">Remove First Element</button>
+
+    <script>
+    
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+        function updateDisplay() {
+            document.getElementById('output').textContent = fruits.join(', ');
+        }
+        updateDisplay();
+        document.getElementById('addButton').addEventListener('click', function() {
+            fruits.unshift('Mango'); 
+            updateDisplay();
+        });
+
+    
+        document.getElementById('removeButton').addEventListener('click', function() {
+            fruits.shift(); 
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>

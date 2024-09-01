@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Prototype Example</title>
+</head>
+<body>
+    <h1>JavaScript Prototype Example</h1>
+    <div id="output"></div>
+
+    <script>
+        
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        
+        Person.prototype.greet = function() {
+            return `Hello, my name is ${this.name}.`;
+        };
+
+        
+        Person.prototype.describe = function() {
+            return `I am ${this.age} years old.`;
+        };
+
+    
+        const person1 = new Person('Bhavya', 20);
+        const output = document.getElementById('output');
+        output.innerHTML = `
+            ${person1.greet()}<br>
+            ${person1.describe()}
+        `;
+    </script>
+</body>
+</html>

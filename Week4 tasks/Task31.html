@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+</head>
+<body>
+    <h1>Array Manipulation Example</h1>
+    <div id="output"></div>
+    <button id="addButton">Add Element</button>
+    <button id="removeButton">Remove Element</button>
+
+    <script>
+    
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+
+    
+        function updateDisplay() {
+            document.getElementById('output').textContent = fruits.join(', ');
+        }
+        updateDisplay();
+        document.getElementById('addButton').addEventListener('click', function() {
+            fruits.push('Mango'); 
+            updateDisplay();
+        });
+
+        
+        document.getElementById('removeButton').addEventListener('click', function() {
+            fruits.pop();
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>
